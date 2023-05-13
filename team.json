@@ -1,0 +1,49 @@
+{
+    "github_org": "My-Org",
+    "teams": [
+        {
+            "team": "team-read",
+            "team_description": "Repository access with read role",
+            "repository_default_permission": "pull",
+            "repositories": [
+                "My-Org/repository-1",
+                "My-Org/repository-2",
+                "My-Org/repository-3"
+            ]
+        },
+        {
+            "team": "team-write",
+            "team_description": "Repository access with write role",
+            "parent": "team-read",
+            "repository_default_permission": "push",
+            "repositories": [
+                "My-Org/repository-4",
+                "My-Org/repository-5"
+            ]
+        },
+        {
+            "team": "team-admin",
+            "team_description": "Repository access with admin role",
+            "parent": "team-read",
+            "repository_default_permission": "admin",
+            "repositories": [
+                "My-Org/repository-6",
+                "My-Org/repository-7"
+            ]
+        }
+    ],
+    "members": [
+        {
+            "member_id": "icheko",
+            "teams": [
+                "team-admin"
+            ]
+        },
+        {
+            "member_id": "developer",
+            "teams": [
+                "team-write"
+            ]
+        }
+    ]
+}
